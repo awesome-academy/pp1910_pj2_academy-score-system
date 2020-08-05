@@ -1,0 +1,50 @@
+<!-- Start header -->
+<header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="template_web/images/logo.png" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbars-host">
+                <ul class="navbar-nav ml-auto">
+                    <li class="{{ Request::is('/') ? "nav-item active" : "nav-item" }}"><a class="nav-link" href="{{route('index')}}">Home</a></li>
+                    <li class="{{ Request::is('about') ? "nav-item active" : "nav-item" }}"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
+                    <li class="{{ Request::is('course') ? "nav-item active" : "nav-item" }}"><a class="nav-link" href="{{route('course')}}">Course </a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                            <a class="dropdown-item" href="blog.html">Blog </a>
+                            <a class="dropdown-item" href="blog-single.html">Blog single </a>
+                        </div>
+                    </li>
+                    <li class="{{ Request::is('teachers') ? "nav-item active" : "nav-item" }}"><a class="nav-link" href="{{route('teacher')}}">Teachers</a></li>
+                    <li class="{{ Request::is('contact') ? "nav-item active" : "nav-item" }}"><a class="nav-link" href="{{route('contact')}}">Contact</a></li>
+                    {{-- <li class="{{ Request::is('search') ? "nav-item active" : "nav-item" }}"><a class="nav-link" href="{{route('search')}}">Search</a></li> --}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Search </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                            <form class="form-inline" style="width: 224px;">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn-search" type="button">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"></path>
+                                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                                      </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Book Now</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End header -->
